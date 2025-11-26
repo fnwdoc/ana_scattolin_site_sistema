@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Análise Estrutural da Proposta</title>
+    <title>Site Completo vs. Sistema Essencial</title>
     <!-- Carregamento do Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -12,65 +12,53 @@
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
-        /* Cor de fundo principal mais suave e transição para Dark Mode */
-        body {
-            @apply bg-gray-50 dark:bg-gray-900 transition-colors duration-500;
-        }
-
         /* Estilos personalizados para cards e seções */
         .section-card {
-            @apply bg-white dark:bg-gray-800 border dark:border-gray-700 shadow-xl;
+            background-color: #ffffff;
             border-radius: 1.5rem; /* rounded-3xl */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             padding: 2rem;
-            transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         .section-card:hover {
-            transform: translateY(-3px);
-            @apply shadow-2xl;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
         .highlight {
-            @apply bg-indigo-100 dark:bg-indigo-900 p-1 px-2 rounded-md font-semibold text-indigo-700 dark:text-indigo-300;
+            background-color: #e0f2fe; /* light blue */
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            color: #0369a1; /* deep blue */
         }
         /* Estilo para a tabela */
         .component-table th, .component-table td {
-            /* AUMENTANDO O ESPAÇAMENTO INTERNO (PADDING) DE p-4 PARA p-5 */
-            @apply p-5 text-left border-b border-gray-200 dark:border-gray-700;
+            padding: 1.5rem; /* Aumentado de 1rem para 1.5rem */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* gray-200 */
         }
         .component-table th {
-            @apply bg-gray-100 dark:bg-gray-700 font-bold text-gray-700 dark:text-gray-200;
+            background-color: #f9fafb; /* gray-50 */
+            font-weight: 700;
+            color: #1f2937; /* gray-800 */
         }
-        /* Ajuste de tamanho de fonte para celular */
-        @media (max-width: 640px) {
-             .component-table th, .component-table td {
-                @apply p-4 text-sm;
-            }
+        /* Cor de fundo principal mais suave */
+        body {
+            background-color: #f3f4f6;
         }
     </style>
 </head>
 <body>
 
     <!-- Cabeçalho (Header) -->
-    <header class="bg-indigo-700 dark:bg-gray-800 text-white py-6 shadow-2xl sticky top-0 z-10 transition-colors duration-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <div>
-                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
-                    Análise Estrutural da Proposta
-                </h1>
-                <p class="text-lg opacity-80">
-                    Convenção Sinergia 2026: Plataformas de Gestão
-                </p>
-            </div>
-            <!-- Chave Claro/Escuro (Dark/Light Mode Toggle) -->
-            <button id="theme-toggle" class="p-3 rounded-full text-indigo-200 hover:text-white hover:bg-indigo-600 dark:hover:bg-gray-700 transition duration-300 focus:outline-none">
-                <!-- Ícone do Sol (Padrão/Claro) -->
-                <svg id="sun-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-                <!-- Ícone da Lua (Escuro) -->
-                <svg id="moon-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                </svg>
-            </button>
+    <header class="bg-blue-800 text-white py-8 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-2">
+                <span class="block">Site Completo vs. Sistema</span>
+            </h1>
+            <p class="text-xl opacity-80">
+                Análise Estrutural de Escolha para a Convenção Sinergia 2026
+            </p>
         </div>
     </header>
 
@@ -78,26 +66,26 @@
 
         <!-- Seção 1: O Ponto de Corte (Site Completo vs. Sistema) -->
         <section id="ponto-corte" class="mb-16">
-            <div class="section-card border-t-4 border-indigo-500">
-                <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="section-card bg-white border-t-4 border-blue-500">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
-                    0. Ponto Crítico: Escopo da Solução
+                    🎯 Site Completo vs. Sistema: O Ponto de Corte
                 </h2>
-                <p class="text-base text-gray-600 dark:text-gray-400 mb-6">
-                    O fator discriminante entre as propostas reside na extensão da entrega e automação:
-                    <ul class="mt-4 list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-                        <li>**Sistema Essencial:** Foco estrito na **logística crítica**, autogestão de inscrições e alocação de hospedagem.</li>
-                        <li>**Site Completo:** Engloba o Sistema Essencial e adiciona a camada de **comunicação e conteúdo** (agenda, palestrantes, notícias).</li>
+                <p class="text-lg text-gray-600 mb-6">
+                    O ponto crucial que separa o **"Site Completo"** do **"Sistema Essencial"** é a extensão da entrega:
+                    <ul class="mt-4 list-disc pl-5 space-y-2 text-gray-700">
+                        <li>O **Site Completo** entrega todas as informações do evento (programa, palestrantes, links personalizados) em um único local.</li>
+                        <li>O **Sistema Essencial** foca no link de inscrição simples, na <span class="highlight">autogestão e logística crítica</span> de inscrições e hospedagem.</li>
                     </ul>
                 </p>
 
-                <div class="bg-indigo-50 dark:bg-gray-700 p-6 rounded-xl border border-indigo-200 dark:border-gray-600 mt-6">
-                    <h3 class="text-xl font-semibold text-indigo-700 dark:text-indigo-300 mb-3">Requisitos Logísticos Inegociáveis (Ambas Opções):</h3>
-                    <ul class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-                        <li>Gestão de <strong class="text-indigo-600 dark:text-indigo-400">37 cooperativas</strong> e suas complexas trocas de participantes.</li>
-                        <li>Controle rigoroso do **Gerenciamento de Hospedagem** (alocação de apartamentos).</li>
+                <div class="bg-blue-50 p-6 rounded-xl border border-blue-200 mt-6">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">O Sistema (Ambas Opções) Precisa Resolver:</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>A dor crítica das <strong class="text-blue-600">37 cooperativas</strong> realizando trocas de participantes.</li>
+                        <li>O **Gerenciamento de Hospedagem** (alocação complexa de apartamentos).</li>
                     </ul>
                 </div>
             </div>
@@ -105,67 +93,66 @@
 
         <!-- Seção 2: Opção 1 - Sistema Essencial (Meio Termo) -->
         <section id="meio-termo" class="mb-16">
-            <!-- CORREÇÃO: Adicionada a classe dark:bg-gray-700 para manter o fundo da seção em Dark Mode -->
-            <div class="section-card bg-indigo-50 dark:bg-gray-700 border-t-4 border-indigo-600 dark:border-indigo-400">
-                <h2 class="text-2xl font-bold text-indigo-800 dark:text-indigo-300 mb-6 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 dark:text-indigo-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="section-card bg-blue-50 border-t-4 border-blue-600">
+                <h2 class="text-3xl font-bold text-blue-800 mb-6 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.008 12.008 0 002 15c0 3.737 2.138 6.83 5.232 9.006C9.275 23.639 12 24 12 24s2.725-.361 4.768-1.994C19.862 21.83 22 18.737 22 15a12.008 12.008 0 00-2.382-10.016z" />
                     </svg>
-                    1. Opção Essencial: Previsibilidade Logística
+                    1. Opção Recomendada: O Sistema Essencial de Previsibilidade
                 </h2>
-                <p class="text-lg text-indigo-700 dark:text-indigo-200 font-medium mb-6">
-                    Proposta focada no **Mínimo Viável para Gestão**, transformando esforço operacional manual em automação e previsibilidade.
+                <p class="text-xl text-blue-700 font-semibold mb-6">
+                    É o <span class="highlight bg-blue-200 text-blue-800">mínimo viável</span> para transformar o **Esforço Manual** em **Previsibilidade Logística**. Foco apenas nos módulos críticos de gestão.
                 </p>
 
-                <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-600">
-                    <table class="min-w-full component-table">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full component-table rounded-xl overflow-hidden">
                         <thead>
                             <tr>
-                                <th class="w-1/4">Módulo Funcional</th>
-                                <th class="w-1/4">Meta Atendida</th>
-                                <th class="w-1/2">Justificativa Estratégica</th>
+                                <th class="w-1/4">Componente da Solução</th>
+                                <th class="w-1/4">Requisito Atendido</th>
+                                <th class="w-1/2">Justificativa Baseada no Foco</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="font-medium text-indigo-800 dark:text-indigo-300">Inscrições e Área do Inscrito</td>
-                                <td>Autogestão de participantes e status.</td>
-                                <td>**ELEMENTO CHAVE** para o controle de trocas por parte das cooperativas.</td>
+                                <td class="font-medium text-blue-800">Módulo de Inscrições e Área do Inscrito</td>
+                                <td>Troca de participantes pela cooperativa ou inscrito.</td>
+                                <td>**ESSENCIAL** para a autogestão de grupos e acompanhamento de status.</td>
                             </tr>
                             <tr>
-                                <td class="font-medium text-indigo-800 dark:text-indigo-300">Controle de Alojamentos</td>
-                                <td>Alocação e gestão de hospedagem.</td>
-                                <td>**CRÍTICO** para resolver a complexidade da logística hoteleira do evento.</td>
+                                <td class="font-medium text-blue-800">Controle de Alojamentos/Hospedagem</td>
+                                <td>Gerenciamento de hospedagem em apartamentos.</td>
+                                <td>**VITAL** para a logística específica do evento e perguntas personalizadas.</td>
                             </tr>
                             <tr>
-                                <td class="font-medium text-indigo-800 dark:text-indigo-300">Relatórios e Admin.</td>
-                                <td>Auditoria e painel de controle executivo.</td>
-                                <td>Garante **GOVERNANÇA e SEGURANÇA** dos dados de inscrição e logística.</td>
+                                <td class="font-medium text-blue-800">Módulos de Relatórios e Admin.</td>
+                                <td>Controle (números, gráficos) e Auditoria (logs diversos usários).</td>
+                                <td>Garante **SEGURANÇA** e capacidade de recuperação, além do painel de controle.</td>
                             </tr>
                             <tr>
-                                <td class="font-medium text-indigo-800 dark:text-indigo-300">Emissão de Certificados</td>
+                                <td class="font-medium text-blue-800">Emissão de Certificados</td>
                                 <td>Documentação pós-evento.</td>
-                                <td>Automação da emissão de PDFs, liberando tempo da equipe.</td>
+                                <td>Emissão automática de PDFs na área do inscrito, liberando a equipe da **tarefa manual**.</td>
                             </tr>
                             <tr>
-                                <td class="font-medium text-indigo-800 dark:text-indigo-300">Assessoria Pré-evento</td>
-                                <td>Atendimento aos inscritos e auxílio na gestão.</td>
+                                <td class="font-medium text-blue-800">Assessoria Pré-evento</td>
+                                <td>Atendimento aos inscritos e auxílio na gestão de hospedagem.</td>
                                 <td>Suporte dedicado para garantir o funcionamento e a correta alocação da logística.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="mt-8 p-4 bg-indigo-100 dark:bg-gray-600 rounded-lg border border-indigo-200 dark:border-gray-600">
-                    <p class="text-lg font-bold text-indigo-800 dark:text-indigo-200">
-                        🔑 Foco: <span class="text-indigo-600 dark:text-indigo-400">Automatização de Processos</span> para máxima eficiência operacional.
+                <div class="mt-8 p-4 bg-blue-100 rounded-lg">
+                    <p class="text-lg font-bold text-blue-800">
+                        🔑 Foco desta Opção: <span class="text-blue-600">Alavancagem de Código</span> para automatizar o trabalho manual.
                     </p>
                 </div>
                 <!-- BLOCO DE PREÇO - OPÇÃO 1 -->
-                <div class="mt-8 p-6 bg-indigo-200 dark:bg-indigo-900 rounded-xl text-center border-2 border-indigo-400 dark:border-indigo-600 shadow-md">
-                    <h3 class="text-xl sm:text-2xl font-bold text-indigo-900 dark:text-indigo-200 mb-1">Valor do Investimento (Opção 1):</h3>
-                    <p class="text-4xl sm:text-5xl font-extrabold text-indigo-900 dark:text-indigo-100">R$ [INSERIR PREÇO AQUI]</p>
-                    <p class="text-sm text-indigo-700 dark:text-indigo-300 mt-2">Licenciamento e serviços essenciais inclusos. Consulte a proposta detalhada.</p>
+                <div class="mt-8 p-6 bg-blue-200 rounded-xl text-center border-2 border-blue-400">
+                    <h3 class="text-xl sm:text-2xl font-bold text-blue-900 mb-1">Custo Estimado da Opção 1:</h3>
+                    <p class="text-4xl sm:text-5xl font-extrabold text-blue-900">R$ [INSERIR PREÇO AQUI]</p>
+                    <p class="text-sm text-blue-700 mt-2">Valores de licenciamento e serviço inclusos. Consulte a proposta detalhada.</p>
                 </div>
                 <!-- FIM BLOCO DE PREÇO -->
             </div>
@@ -173,48 +160,47 @@
 
         <!-- Seção 3: Opção 2 - Sistema Completo (Com Site) -->
         <section id="sistema-completo" class="mb-16">
-            <!-- CORREÇÃO: Adicionada a classe dark:bg-gray-700 para manter o fundo da seção em Dark Mode -->
-            <div class="section-card bg-teal-50 dark:bg-gray-700 border-t-4 border-teal-600 dark:border-teal-400">
-                <h2 class="text-2xl font-bold text-teal-800 dark:text-teal-300 mb-6 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600 dark:text-teal-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="section-card bg-green-50 border-t-4 border-green-600">
+                <h2 class="text-3xl font-bold text-green-800 mb-6 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                     </svg>
-                    2. Opção Completa: Capital e Comunicação
+                    2. Opção Recomendada: O Sistema Completo de Capital
                 </h2>
-                <p class="text-lg text-teal-700 dark:text-teal-200 font-medium mb-6">
-                    Expansão da Opção 1, integrando um website institucional e otimizações logísticas adicionais, capitalizando tempo e capacidade de comunicação.
+                <p class="text-xl text-green-700 font-semibold mb-6">
+                    Esta opção tem como objetivo <span class="highlight bg-green-200 text-green-800">fornecer um site completo</span>, garantindo que os cooperados acessem todas as informações do evento num único local e maximizando a autonomia.
                 </p>
 
-                <div class="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-600">
-                    <table class="min-w-full component-table">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full component-table rounded-xl overflow-hidden">
                         <thead>
                             <tr>
-                                <th colspan="3" class="text-center bg-teal-100 dark:bg-gray-600 text-teal-800 dark:text-teal-300 font-extrabold">INCLUI TODOS OS MÓDULOS DA OPÇÃO 1 (ESSENCIAL)</th>
+                                <th colspan="3" class="text-center bg-green-100 text-green-800 font-extrabold">INCLUI TODOS OS ITENS DA OPÇÃO 1 (SISTEMA ESSENCIAL)</th>
                             </tr>
                             <tr>
-                                <th class="w-1/4">Componente Adicional</th>
-                                <th class="w-1/4">Meta Adicional</th>
-                                <th class="w-1/2">Justificativa de Valor Agregado</th>
+                                <th class="w-1/4">Componente Adicional / Otimização</th>
+                                <th class="w-1/4">Requisito Atendido</th>
+                                <th class="w-1/2">Justificativa Baseada no Foco</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="font-medium text-teal-800 dark:text-teal-300">Website Institucional</td>
-                                <td>Centralização total da informação.</td>
-                                <td>Entrega de <strong class="text-teal-600 dark:text-teal-400">Layout Responsivo</strong>, notícias e conteúdo multimídia em uma única interface.</td>
+                                <td class="font-medium text-green-800">Website Institucional (Responsivo)</td>
+                                <td>Comunicação e informação sobre o evento.</td>
+                                <td>Inclui notícias, vídeos e **Layout Responsivo**, centralizando todas as informações do evento.</td>
                             </tr>
                             <tr>
-                                <td class="font-medium text-teal-800 dark:text-teal-300">Controle de Agendas</td>
-                                <td>Gestão de Programação Complexa.</td>
-                                <td>Implementa **Controle de Colisão de Horário** (Schedule Collision Control), eliminando erros logísticos de agenda.</td>
+                                <td class="font-medium text-green-800">Serviço Adicional: Montagem da Programação</td>
+                                <td>Controle logístico completo.</td>
+                                <td>Realiza o **Controle de Colisão de Horário**, eliminando erros de alocação de agenda.</td>
                             </tr>
                             <tr>
-                                <td class="font-medium text-teal-800 dark:text-teal-300">Consultoria Estratégica Ampliada</td>
-                                <td>Suporte de alto nível e experiência.</td>
-                                <td>Atuação consultiva, capitalizando <strong class="text-indigo-600 dark:text-indigo-400">21 anos</strong> de experiência em eventos desta magnitude.</td>
+                                <td class="font-medium text-green-800">Consultoria Estratégica Ampliada</td>
+                                <td>Auxílio na tomada de decisões.</td>
+                                <td>Atuação que **"vai além do website"** (<strong class="text-orange-600">21 anos</strong> de experiência) transformando o suporte em **ativo de Capital**.</td>
                             </tr>
                             <tr>
-                                <td class="font-medium text-teal-800 dark:text-teal-300">Serviço Adicional: Questões de Acessibilidade</td>
+                                <td class="font-medium text-green-800">Serviço Adicional: Questões de Acessibilidade</td>
                                 <td>Personalização do formulário.</td>
                                 <td>Refina o formulário com identificação de **deficiência ou necessidades especiais**.</td>
                             </tr>
@@ -222,62 +208,62 @@
                     </table>
                 </div>
 
-                <div class="mt-8 p-4 bg-teal-100 dark:bg-gray-600 rounded-lg border border-teal-200 dark:border-gray-600">
-                    <p class="text-lg font-bold text-teal-800 dark:text-teal-200">
-                        💡 Foco: <span class="text-teal-600 dark:text-teal-400">Amplificação de Valor</span>, combinando automação com comunicação e expertise estratégica.
+                <div class="mt-8 p-4 bg-green-100 rounded-lg">
+                    <p class="text-lg font-bold text-green-800">
+                        💡 Foco desta Opção: <span class="text-green-600">Alavancagem de Colaboração e Código</span> para maximizar **Capital e Tempo**.
                     </p>
                 </div>
                 <!-- BLOCO DE PREÇO - OPÇÃO 2 -->
-                <div class="mt-8 p-6 bg-teal-200 dark:bg-teal-900 rounded-xl text-center border-2 border-teal-400 dark:border-teal-600 shadow-md">
-                    <h3 class="text-xl sm:text-2xl font-bold text-teal-900 dark:text-teal-200 mb-1">Valor do Investimento (Opção 2):</h3>
-                    <p class="text-4xl sm:text-5xl font-extrabold text-teal-900 dark:text-teal-100">R$ [INSERIR PREÇO AQUI]</p>
-                    <p class="text-sm text-teal-700 dark:text-teal-300 mt-2">Licenciamento e serviços completos inclusos. Consulte a proposta detalhada.</p>
+                <div class="mt-8 p-6 bg-green-200 rounded-xl text-center border-2 border-green-400">
+                    <h3 class="text-xl sm:text-2xl font-bold text-green-900 mb-1">Custo Estimado da Opção 2:</h3>
+                    <p class="text-4xl sm:text-5xl font-extrabold text-green-900">R$ [INSERIR PREÇO AQUI]</p>
+                    <p class="text-sm text-green-700 mt-2">Valores de licenciamento e serviço inclusos. Consulte a proposta detalhada.</p>
                 </div>
                 <!-- FIM BLOCO DE PREÇO -->
             </div>
         </section>
 
-        <!-- Seção 4: Assistente de Atendimento com I.A. -->
+        <!-- Seção 4: Assistente de Atendimento com I.A. (Substituindo Conclusão) -->
         <section id="assistente-ia" class="mb-16">
-            <div class="section-card border-t-4 border-indigo-500">
-                <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="section-card bg-white border-t-4 border-purple-500">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1v-3m-6.49-4.88c0-1.87 1.5-3.37 3.37-3.37s3.37 1.5 3.37 3.37m-2.25 0a.75.75 0 01-1.5 0M10.5 18H9a2 2 0 00-2 2v2h10v-2a2 2 0 00-2-2h-1.5" />
                     </svg>
-                    3. Módulo Inteligência Artificial: Suporte Cognitivo
+                    ✨ Assistente de Atendimento com Motor de Inteligência Artificial
                 </h2>
-                <p class="text-base text-gray-600 dark:text-gray-400 mb-6">
-                    Integração de um motor de atendimento cognitivo treinado especificamente com o manual de regras e FAQs da Sinergia 2026.
+                <p class="text-lg text-gray-600 mb-6">
+                    A inclusão de um assistente virtual treinado com o conteúdo do evento e as FAQs específicas da Sinergia 2026 garante suporte 24/7 e reduz a carga de trabalho da equipe de organização.
                 </p>
 
                 <!-- Condição Especial -->
-                <div class="p-5 bg-indigo-50 dark:bg-gray-700 rounded-lg border border-indigo-300 dark:border-gray-600 mb-6">
-                    <h3 class="text-xl font-bold text-indigo-800 dark:text-indigo-300 mb-2">Condição Especial da Proposta:</h3>
-                    <p class="text-base text-indigo-700 dark:text-indigo-300">O motor de I.A. será implementado para oferecer respostas imediatas e precisas 24/7 sobre logística, inscrições e programação, desonerando a equipe humana.</p>
+                <div class="p-5 bg-purple-50 rounded-lg border border-purple-300 mb-6">
+                    <h3 class="text-xl font-bold text-purple-800 mb-2">Condição Especial:</h3>
+                    <p class="text-lg text-purple-700">O motor de I.A. será integrado ao site para resolver dúvidas comuns sobre inscrições, hospedagem e programação, oferecendo respostas instantâneas e precisas aos cooperados.</p>
                 </div>
 
                 <!-- Preços -->
-                <div class="flex flex-col sm:flex-row justify-between items-stretch gap-6 mt-8">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-6 mt-8">
                     <!-- Preço Normal -->
-                    <div class="flex-1 p-5 bg-gray-100 dark:bg-gray-700 rounded-xl border border-gray-300 dark:border-gray-600 text-center flex flex-col justify-center">
-                        <p class="text-base font-semibold text-gray-700 dark:text-gray-300">Preço Padrão do Módulo I.A.:</p>
-                        <p class="text-3xl font-extrabold text-gray-900 dark:text-gray-100 mt-1">R$ [PREÇO NORMAL PLACEHOLDER]</p>
+                    <div class="flex-1 p-5 bg-gray-100 rounded-xl border border-gray-300 text-center w-full">
+                        <p class="text-lg font-semibold text-gray-700">Preço Normal (Motor I.A. + Treinamento):</p>
+                        <p class="text-3xl font-extrabold text-gray-900 mt-1">R$ [PREÇO NORMAL PLACEHOLDER]</p>
                     </div>
 
                     <!-- Preço Proposta (MAIS DESTAQUE) -->
-                    <div class="flex-1 p-6 bg-indigo-200 dark:bg-indigo-700 rounded-xl border-2 border-indigo-500 dark:border-indigo-400 text-center shadow-lg transform scale-105">
-                        <p class="text-xl font-bold text-indigo-900 dark:text-indigo-200">Valor Negociado para Esta Proposta:</p>
-                        <p class="text-5xl font-extrabold text-indigo-900 dark:text-indigo-100 mt-1">R$ [PREÇO PROPOSTA PLACEHOLDER]</p> 
+                    <div class="flex-1 p-6 bg-purple-200 rounded-xl border-2 border-purple-500 text-center w-full shadow-lg">
+                        <p class="text-xl font-bold text-purple-900">Preço para Essa Proposta:</p>
+                        <p class="text-5xl font-extrabold text-purple-900 mt-1">R$ [PREÇO PROPOSTA PLACEHOLDER]</p>
                     </div>
                 </div>
 
-                <!-- Navegação para as opções do sistema -->
-                <div class="mt-8 flex flex-col sm:flex-row gap-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-                    <a href="#meio-termo" class="flex-1 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-xl transition duration-300">
-                        Analisar Opção Essencial
+                <!-- Navegação para as opções do sistema, como era na seção de conclusão original -->
+                <div class="mt-8 flex flex-col sm:flex-row gap-4 pt-4 border-t border-gray-200">
+                    <a href="#meio-termo" class="flex-1 text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition duration-300">
+                        Voltar para Opção Essencial (Sistema)
                     </a>
-                    <a href="#sistema-completo" class="flex-1 text-center bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-xl transition duration-300">
-                        Analisar Opção Completa
+                    <a href="#sistema-completo" class="flex-1 text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl transition duration-300">
+                        Voltar para Opção Completa (Site + Sistema)
                     </a>
                 </div>
             </div>
@@ -286,53 +272,11 @@
     </main>
 
     <!-- Rodapé -->
-    <footer class="bg-gray-800 dark:bg-gray-950 text-white py-6 mt-12 transition-colors duration-500">
+    <footer class="bg-gray-800 text-white py-6 mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center opacity-75">
-            <p>Documento de Análise Estrutural. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Análise Estrutural da Proposta. Conteúdo otimizado para fácil visualização.</p>
         </div>
     </footer>
-
-    <!-- Script para Dark Mode -->
-    <script>
-        const htmlElement = document.documentElement;
-        const toggleButton = document.getElementById('theme-toggle');
-        const sunIcon = document.getElementById('sun-icon');
-        const moonIcon = document.getElementById('moon-icon');
-
-        // Função para aplicar o tema com base na preferência salva ou do sistema
-        function applyTheme(theme) {
-            if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                htmlElement.classList.add('dark');
-                sunIcon.classList.add('hidden');
-                moonIcon.classList.remove('hidden');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                htmlElement.classList.remove('dark');
-                moonIcon.classList.add('hidden');
-                sunIcon.classList.remove('hidden');
-                localStorage.setItem('theme', 'light');
-            }
-        }
-
-        // 1. Aplicar tema ao carregar
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme');
-            applyTheme(savedTheme);
-        });
-
-        // 2. Ouvinte de clique para alternar
-        toggleButton.addEventListener('click', () => {
-            const currentTheme = htmlElement.classList.contains('dark') ? 'light' : 'dark';
-            applyTheme(currentTheme);
-        });
-
-        // 3. Opcional: Ouvir a mudança de tema do sistema (se o usuário não tiver uma preferência salva)
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-            if (!localStorage.getItem('theme')) {
-                applyTheme(e.matches ? 'dark' : 'light');
-            }
-        });
-    </script>
 
 </body>
 </html>
